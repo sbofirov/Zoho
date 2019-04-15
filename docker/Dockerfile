@@ -10,7 +10,6 @@ RUN \
 
 RUN useradd -ms /bin/bash zoho
 
-#ADD ./docker/Zoho_Analytics_64bit.bin /home/zoho
 ADD ./docker/responses.txt /home/zoho
 ADD https://www.zoho.com/analytics/65482/Zoho_Analytics_64bit.bin /home/zoho/Zoho_Analytics_64bit.bin
 
