@@ -9,7 +9,7 @@
 
 
 Y
-/src
+/app
 Y
 
 
@@ -18,3 +18,5 @@ Y
 
 
 
+
+echo END
