@@ -11,7 +11,7 @@ RUN \
 
 RUN useradd -ms /bin/bash zoho
 
-ADD ./docker/responses.txt /home/zoho
+ADD ./responses.txt /home/zoho
 
 RUN cd /home/zoho && wget https://www.zoho.com/analytics/65482/Zoho_Analytics_64bit.bin
 
@@ -26,8 +26,6 @@ USER zoho
 RUN cat /home/zoho/responses.txt | /home/zoho/Zoho_Analytics_64bit.bin -i console
 RUN chmod +x /app/Analytics/bin/StartServer.sh
 RUN rm /home/zoho/Zoho_Analytics_64bit.bin
-
-VOLUME ["/app"]
 
 WORKDIR /app/Analytics/bin
 

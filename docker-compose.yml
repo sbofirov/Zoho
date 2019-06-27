@@ -3,7 +3,13 @@ version: "3"
 services:
   zoho:
     build:
-      dockerfile: docker/Dockerfile
-      context: .
+      context: docker
     ports:
       - 8443:8443
+      - 33366:33366
+    volumes:
+      - data-postgre:/app/Analytics/pgsql
+
+volumes:
+  data-postgre:
+    driver: local
